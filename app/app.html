@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="notes">
+  <head>
+    <meta charset="utf-8">
+    <title>  Angular Directives </title>
+
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="css/app.css" />
+
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+  </head>
+  <body class="container">
+      <div class="well" ng-controller="NotesController" >
+        <pre>{{ $SCOPE | json }}</pre>
+          <section data-ng-if="localStorageSupported">
+              <header>
+                  <div class="logo"></div>
+                  <h2>Notes app</h2>
+                  <div class="toolbar">
+                    <button class="btn btn-default" data-ng-disabled="!edited" data-ng-click="preSaveNote()">
+                      Save Note</button>
+                    <button class="btn btn-default" data-ng-click="newNote()">New Note</button>
+                    <button class="btn btn-default" data-ng-click="deleteNote($event)">Delete Note</button>
+                  </div>
+              </header>
+
+            <aside>
+              <ul data-ng-if="notes.length">
+                  <li data-ng-repeat="note in notes">
+                      <a href=""></a>
+                  </li>
+              </ul>
+
+              <p data-ng-if="!notes.length">You don't have any notes yet! </p>
+            </aside>
+
+            <main>
+              <form action="">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </form>
+            </main>
+          </section>
+
+          <section data-ng-if="!localStorageSupported">
+            <h1>Sorry, your brwoser does not support localStorage. Please upgrade your browser to use Notes</h1>
+          </section>
+            <!-- <my-click> </my-click> -->
+
+        </div>
+      <!-- module -->
+      <script type="text/javascript" src="modules/app.module.js"> </script>
+
+      <!-- controller -->
+      <script type="text/javascript" src="controllers/notes.controller.js"> </script>
+
+      <!-- services -->
+      <script type="text/javascript" src="services/localstorage.service.js"> </script>
+      <script type="text/javascript" src="services/uuid.service.js"> </script>
+
+      <!-- directives -->
+      <!-- <script type="text/javascript" src="directives/ngclick.directive.js"> </script> -->
+
+
+
+  </body>
+</html>

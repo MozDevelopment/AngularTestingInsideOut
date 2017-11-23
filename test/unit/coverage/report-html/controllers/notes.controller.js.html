@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controllers/notes.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controllers/</a> notes.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.36% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.08% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.36% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+  'use strict';
+&nbsp;
+  angular.module('notes')
+        .controller('NotesController', NotesController);
+&nbsp;
+        NotesController.$inject = ['$scope','$document','$timeout','localStorageService','uuid'];
+&nbsp;
+        function NotesController($scope, $document, $timeout, localStorageService, uuid) {
+ 
+&nbsp;
+            $scope.localStorageSupported = localStorageService.supportsStorage();
+&nbsp;
+            if($scope.localStorageSupported) {
+              $scope.notes = localStorageService.getNotes() || [];
+              $scope.currentNote = $scope.notes[0] || {};
+&nbsp;
+&nbsp;
+              $scope.edited = false;
+              $scope.showModal = false;
+&nbsp;
+              $scope.preSaveNote = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                  if(!$scope.currentNote.title) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.showModal = true;</span>
+<span class="cstat-no" title="statement not covered" >                    $timeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var field = $document[0].getElementById('title');</span>
+<span class="cstat-no" title="statement not covered" >                        field.focus();</span>
+                    }, 0);
+                  } else {
+<span class="cstat-no" title="statement not covered" >                    $scope.saveNote();</span>
+                  }
+              };
+&nbsp;
+              $scope.hideModal = function($event) {
+                $scope.showModal = !$event.target.classList.contains('overlay');
+              };
+&nbsp;
+              $scope.saveNote = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.showModal = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.edited = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if(!$scope.currentNote.id) {</span>
+<span class="cstat-no" title="statement not covered" >                  $scope.currentNote.id = uuid.generate();</span>
+<span class="cstat-no" title="statement not covered" >                  $scope.notes.push($scope.currentNote);</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                  $scope.notes.some(<span class="fstat-no" title="function not covered" >function(note, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >                      if(note.id === $scope.currentNote.id) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.notes.splice(index, 1, $scope.currentNote);</span>
+                      }
+                  });
+                }
+<span class="cstat-no" title="statement not covered" >                localStorageService.saveNotes($scope.notes);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $timeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var newActive = $document[0].getElementById($Sscope.currentNote.id);</span>
+<span class="cstat-no" title="statement not covered" >                    newActive.classList.add('active');</span>
+                });
+              };
+&nbsp;
+            $scope.newNote = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                var currentActice = $document[0].getElementsByClassName('active')[0],</span>
+                  editor = $document[0].getElementsByTagName('textarea')[0];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                  $scope.currentNote = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                  if(currentActice) {</span>
+<span class="cstat-no" title="statement not covered" >                    currentActice.classList.remove('active');</span>
+                  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                  editor.focus();</span>
+            };
+&nbsp;
+            $scope.openNote = <span class="fstat-no" title="function not covered" >function($event) {</span>
+<span class="cstat-no" title="statement not covered" >                var hash = $event.target.id,</span>
+                currentActice = $document.getElementsByClass('active')[0];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $scope.notes.some(<span class="fstat-no" title="function not covered" >function(note) {</span></span>
+<span class="cstat-no" title="statement not covered" >                  if(note.id === hash) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.currentNote = note;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                      return true;</span>
+                  }
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                currentActice.classList.remove('active');</span>
+<span class="cstat-no" title="statement not covered" >                $event.target.classList.add('active');</span>
+            };
+&nbsp;
+            $scope.deleteNote = <span class="fstat-no" title="function not covered" >function($event) {</span>
+<span class="cstat-no" title="statement not covered" >                var hash = $scope.currentNote.id;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $scope.notes.some(<span class="fstat-no" title="function not covered" >function(note, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >                  var newNote, newActive;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                  if(note.id === hash) {</span>
+<span class="cstat-no" title="statement not covered" >                      newActive.classList.add('active');</span>
+                  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                  $scope.notes.splice(index, 1);</span>
+<span class="cstat-no" title="statement not covered" >                  $scope.currentNote = newNote;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                  return true</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              localStorageService.saveNotes($scope.notes);</span>
+            };
+&nbsp;
+        }
+&nbsp;
+      }//NotesController
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Nov 23 2017 14:56:58 GMT+0200 (CAT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

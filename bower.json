@@ -1,0 +1,23 @@
+{
+  "name": "notes",
+  "description": "A simple web app to manage notes",
+  "main": "js/app.js",
+  "authors": [
+    "Lars Lemos"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "JavaScript",
+    "Notes"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.11",
+    "angular-mocks": "1.5.11",
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "sinonjs": "^1.17.1",
+    "jasmine-core": "jasmine#^2.8.0"
+  }
+}
