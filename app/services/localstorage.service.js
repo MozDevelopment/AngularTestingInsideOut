@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   'use strict';
 
   angular.module('notes')
@@ -17,6 +17,6 @@
             saveNotes: function(notes) {
                 return $window.localStorage.setItem('notes', angular.toJson(notes));
             },
-          }
+          };
         }
 })();

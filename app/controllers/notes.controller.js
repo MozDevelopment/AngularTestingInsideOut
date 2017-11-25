@@ -99,7 +99,7 @@
                   $scope.notes.splice(index, 1);
                   $scope.currentNote = newNote;
 
-                  return true
+                  return true;
                 });
 
               localStorageService.saveNotes($scope.notes);

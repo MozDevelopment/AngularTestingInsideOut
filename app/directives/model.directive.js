@@ -2,13 +2,13 @@
   'use strict';
 
   angular.module('notes')
-        .controller('modal', modal)
+        .controller('modal', modal);
 
         function modal() {
           return {
             restrict: 'E',
             temlapateUrl: 'templates/modal.html'
           };
-      }
+        }
 
 })();

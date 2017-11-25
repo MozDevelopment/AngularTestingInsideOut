@@ -3,6 +3,6 @@ module.exports = {
         sourceMap: true
     },
     files: {
-        'app/css/app.css': 'app/scss/app.scss'
+        'app/scss/app.scss': 'app/css/app.css'
     }
 };

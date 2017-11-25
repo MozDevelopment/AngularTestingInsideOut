@@ -4,6 +4,6 @@ module.exports = {
         jshintrc: true
     },
     files: {
-        src: ['gruntfile.js', 'app/js/**/*.js']
+        src: ['gruntfile.js', 'app/**/*.js']
     }
 };

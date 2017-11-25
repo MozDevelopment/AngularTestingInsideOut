@@ -24,6 +24,5 @@
           expect($scope.$parent.editor.id).toEqual('testElement');
         });
 
-
     });
 })();
