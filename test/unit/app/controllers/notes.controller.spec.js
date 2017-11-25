@@ -58,7 +58,6 @@
             $scope.hideModal(fakeEvent);
 
             expect($scope.showModal).toEqual(false);
-
         });
       });
 

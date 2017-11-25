@@ -7,7 +7,7 @@
         NotesController.$inject = ['$scope','$document','$timeout','localStorageService','uuid'];
 
         function NotesController($scope, $document, $timeout, localStorageService, uuid) {
- 
+
 
             $scope.localStorageSupported = localStorageService.supportsStorage();
 
