@@ -13,14 +13,16 @@
             console.info("EACH");
             console.info($controller);
             console.info("$SCOPE");
-            dump($scope.$parent.editor);
+            // dump($scope.$parent);
             sanbox = sinon.sandbox.create();
         }));
 
-        it('stores the reference to the element in the parent scope', function() {
+        xit('stores the reference to the element in the parent scope', function() {
           $controller('NotesController', { $scope: $scope });
           testElement = $compile('<textarea ng-model="currentNote.content" enable-save-on-edit>  </textarea>');
 
+          console.error($scope.$parent.editor);
+          // console.log(testElement);
           expect($scope.$parent.editor.id).toEqual('testElement');
         });
 

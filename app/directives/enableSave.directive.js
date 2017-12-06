@@ -4,12 +4,12 @@
     angular.module('notes')
             .directive('enableSaveOnEdit', enableSaveOnEdit);
 
-            enableSaveOnEdit.$inject = ['$scope'];
+            enableSaveOnEdit.$inject = ['$document'];
 
-            function enableSaveOnEdit($scope) {
+            function enableSaveOnEdit($document) {
                 return {
                   restrict: 'A',
-                  link: saveOnEdit
+                  // link: saveOnEdit
                 };
 
                 function saveOnEdit(scope, element, attributes) {

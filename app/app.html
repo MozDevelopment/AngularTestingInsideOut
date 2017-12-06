@@ -24,19 +24,17 @@
                     <button class="btn btn-default" data-ng-click="deleteNote($event)">Delete Note</button>
                   </div>
               </header>
-
             <aside>
               <ul data-ng-if="notes.length">
                   <li data-ng-repeat="note in notes">
                       <a href=""></a>
                   </li>
               </ul>
-
               <p data-ng-if="!notes.length">You don't have any notes yet! </p>
             </aside>
 
             <main>
-              <form action=""> 
+              <form action="">
                 <textarea ng-model="currentNote.content" enable-save-on-edit > </textarea>
               </form>
             </main>
@@ -59,9 +57,7 @@
       <script type="text/javascript" src="services/uuid.service.js"> </script>
 
       <!-- directives -->
-      <!-- <script type="text/javascript" src="directives/ngclick.directive.js"> </script> -->
-
-
+      <script type="text/javascript" src="directives/enableSave.directive.js"> </script>
 
   </body>
 </html>
